@@ -7,8 +7,6 @@
 
 | [Download](https://github.com/Genometric/MSPC/releases) | [Documentation](https://genometric.github.io/MSPC/) | [Publication](https://genometric.github.io/MSPC/publications)
 | -- | -- |--: |
-
-
 <br/>
 
 ## About
