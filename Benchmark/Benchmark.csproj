@@ -16,6 +16,7 @@
     <RepositoryUrl>https://genometric.github.io/MSPC/</RepositoryUrl>
     <PackageTags>Next-Generation-Sequencing; NGS-analysis; ChIP-seq; genome-analysis; Peak-calling; Comparative-Peak-Calling; Replicates; Single-Cell; ATAC-seq; biological-replicates; technical-replicates</PackageTags>
     <AssemblyName>benchmark</AssemblyName>
+	<SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
   </PropertyGroup>
 
   <ItemGroup>
