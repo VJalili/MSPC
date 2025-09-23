@@ -48,13 +48,6 @@ graph LR
     coms --> apps;
     coms --> wallet;
     
-    
-    Q1{"What is<br/>your goal?"};
-
-    Q1 -- "Quickly test a model or explore the data format" --> Opt1[Start with a Pre-built Model];
-    Q1 -- "Develop and test different ML models" --> Opt2[Build on Pre-sampled Graphs];
-    Q1 -- "Create a custom dataset for a specific application" --> Opt3[Sample Your Own Custom Graphs];
-    Q1 -- "Reproduce the entire dataset or add new data" --> Opt4[Run the Full ETL Pipeline];
 
     %% --- Link Definitions ---
     click eba "#opt1" "Go to Pre-built Model Section"
