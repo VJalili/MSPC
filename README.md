@@ -14,6 +14,10 @@ stateDiagram-v2
     Neo4jFormat --> Neo4j
     Neo4j --> SampledCommunities
     EBA --> SampledCommunities
+    state GraphStudio {
+        SampleApplications
+        WalletExplorer
+    }
     
 ```
 
