@@ -1,37 +1,6 @@
 ```mermaid
-stateDiagram-v2
-    direction LR
-    BitcoinCore --> EBA
-    state Graph {
-        direction TB
-        TSV
-        Neo4jFormat
-    }
-    EBA --> Graph
-    state Neo4j {
-      direction TB
-      DatabaseDump
-    }
-    Neo4jFormat --> Neo4j
-    Neo4j --> SampledCommunities
-    EBA --> SampledCommunities
-    state GraphStudio {
-        direction TB
-        SampleApplications
-        WalletExplorer
-    }
-
-    SampledCommunities --> GraphStudio
-
-    click EBA "#opt1" "Go to Pre-built Model Section"
-    
-```
-
-
-
-```mermaid
-graph TB
-    bitcoinCore{{Bitcoin Core}} --> eba(EBA);
+graph LR
+    bitcoin{{Bitcoin Core}} --> eba(EBA);
     eba --> tsv[\Graph in TSV\];
     eba --> neo4j[\Graph for Neo4j\];
     neo4j --> neo4jDump[\Neo4j Database Dump\];
@@ -47,17 +16,18 @@ graph TB
 
     eba --> coms[\Sampled Communities\];
     coms --> apps;    
-    
 
     %% --- Link Definitions ---
     click eba "#opt1" "Go to Pre-built Model Section"
 
     %% --- Styling ---
-    style eba fill:#ff9e00,stroke:#ff9e00,color:#000
-    style Opt1 fill:#9d4edd,stroke:#9d4edd,color:#fff
-    style Opt2 fill:#7b2cbf,stroke:#7b2cbf,color:#fff
-    style Opt3 fill:#5a189a,stroke:#5a189a,color:#fff
-    style Opt4 fill:#3c096c,stroke:#3c096c,color:#fff
+    %%style eba fill:#ff9e00,stroke:#ff9e00,color:#000
+    style eba fill:#5a189a,stroke:#5a189a,color:#fff
+    %%style bitcoin fill:#7b2cbf,stroke:#7b2cbf,color:#fff
+    %%style bitcoin fill:#5a189a,stroke:#5a189a,color:#fff
+    %%style bitcoin fill:#3c096c,stroke:#3c096c,color:#fff
+    %%style gStudio fill:#3c096c,stroke:#3c096c,color:#fff
+    %%style gStudio fill:#2E2933,stroke:#2E2933,color:#fff
 ```
 
 
