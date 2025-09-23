@@ -35,18 +35,18 @@ graph LR
     eba --> tsv[\Graph in TSV\];
     eba --> neo4j[\Graph for Neo4j\];
     neo4j --> neo4jDump[\Neo4j Database Dump\];
-    eba --> coms[\Sampled Communities\];
 
     subgraph gStudio[Graph Studio]
+        direction BT
         apps>Applications];
-        
-        subgraph labels[Off-chain Resources]
-            wallet>WalletExplorer];
-        end
+
+        offchain[/Off-chain Resources/];
+
+        offchain --> apps;
     end
 
-    coms --> apps;
-    coms --> wallet;
+    eba --> coms[\Sampled Communities\];
+    coms --> apps;    
     
 
     %% --- Link Definitions ---
