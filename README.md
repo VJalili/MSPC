@@ -2,8 +2,8 @@
 graph LR
     bitcoin{{Bitcoin Core}} --> eba(EBA);
     eba --> tsv[\Graph in TSV\];
-    eba --> neo4j[\Graph for Neo4j\];
-    neo4j --> neo4jDump[\Neo4j Database Dump\];
+    eba --> neo4j[\Graph in Neo4j\];
+    neo4j --> neo4jDump[\Neo4j dump\];
 
     subgraph gStudio[Graph Studio]
         direction TB
