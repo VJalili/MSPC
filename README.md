@@ -30,19 +30,19 @@ stateDiagram-v2
 
 
 ```mermaid
-graph LR
+graph TB
     bitcoinCore{{Bitcoin Core}} --> eba(EBA);
     eba --> tsv[\Graph in TSV\];
     eba --> neo4j[\Graph for Neo4j\];
     neo4j --> neo4jDump[\Neo4j Database Dump\];
 
     subgraph gStudio[Graph Studio]
-        direction BT
+        direction TB
         apps>Applications];
 
         offchain[/Off-chain Resources/];
 
-        offchain --> apps;
+        %%offchain --> apps;
     end
 
     eba --> coms[\Sampled Communities\];
