@@ -1,12 +1,20 @@
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-%% this is a comment
-    Still --> Moving
-    Moving --> Still %% another comment
-    Moving --> Crash
-    Crash --> [*]
+    direction LR
+    BitcoinCore --> EBA
+    state Graph {
+        TSV
+        Neo4jFormat
+    }
+    EBA --> Graph
+    state Neo4j {
+      direction LR
+      DatabaseDump
+    }
+    Neo4jFormat --> Neo4j
+    Neo4j --> SampledCommunities
+    EBA --> SampledCommunities
+    
 ```
 
 
