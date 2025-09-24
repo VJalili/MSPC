@@ -1,36 +1,3 @@
-```mermaid
-graph LR
-    bitcoin{{Bitcoin Core}} --> eba(EBA);
-    eba --> tsv[\Graph in TSV\];
-    eba --> neo4j[\Graph in Neo4j\];
-    neo4j --> neo4jDump[\Neo4j dump\];
-
-    subgraph gStudio[Graph Studio]
-        direction TB
-        apps>Applications];
-
-        offchain[/Off-chain Resources/];
-
-        %%offchain --> apps;
-    end
-
-    eba --> coms[\Sampled Communities\];
-    coms --> apps;    
-
-    %% --- Link Definitions ---
-    click eba "#opt1" "Go to Pre-built Model Section"
-
-    %% --- Styling ---
-    %%style eba fill:#ff9e00,stroke:#ff9e00,color:#000
-    style eba fill:#5a189a,stroke:#5a189a,color:#fff
-    %%style bitcoin fill:#7b2cbf,stroke:#7b2cbf,color:#fff
-    %%style bitcoin fill:#5a189a,stroke:#5a189a,color:#fff
-    %%style bitcoin fill:#3c096c,stroke:#3c096c,color:#fff
-    %%style gStudio fill:#3c096c,stroke:#3c096c,color:#fff
-    %%style gStudio fill:#2E2933,stroke:#2E2933,color:#fff
-```
-
-
 <p align="center">
   <a href="https://genometric.github.io/MSPC/">
     <img src="https://raw.githubusercontent.com/Genometric/MSPC/dev/website/static/logo/logo_w_txt_banner.svg?raw=true" alt="MSPC" width="300" />
